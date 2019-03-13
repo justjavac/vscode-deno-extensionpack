@@ -1,0 +1,16 @@
+.vscode/**
+.github/**
+*.vsix
+
+.gitattributes
+.gitignore
+.gitmodules
+.appveyor.yml
+.travis.yml
+.npmrc
+.yarnrc
+
+tsconfig*.json
+package-lock.json
+
+vsc-extension-quickstart.md

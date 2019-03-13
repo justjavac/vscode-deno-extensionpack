@@ -1,0 +1,37 @@
+{
+  "name": "vscode-deno-extensionpack",
+  "displayName": "Deno VS Code Extension Pack",
+  "description": "A collection of extensions for working with Deno Applications in VS Code",
+  "publisher": "justjavac",
+  "version": "0.1.0",
+  "galleryBanner": {
+    "color": "#47B784",
+    "theme": "dark"
+  },
+  "icon": "logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justjavac/vscode-deno-extensionpack"
+  },
+  "bugs": {
+    "url": "https://github.com/justjavac/vscode-deno-extensionpack/issues"
+  },
+  "homepage": "https://github.com/justjavac/vscode-deno-extensionpack",
+  "engines": {
+    "vscode": "^1.26.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "keywords": [
+    "deno",
+    "extension pack",
+    "deno extension collection"
+  ],
+  "extensionPack": [
+    "justjavac.vscode-deno",
+    "esbenp.prettier-vscode",
+    "coenraads.bracket-pair-colorizer"
+  ],
+  "license": "MIT"
+}
