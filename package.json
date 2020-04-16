@@ -30,8 +30,7 @@
   ],
   "extensionPack": [
     "justjavac.vscode-deno",
-    "esbenp.prettier-vscode",
-    "coenraads.bracket-pair-colorizer"
+    "esbenp.prettier-vscode"
   ],
   "license": "MIT"
 }
