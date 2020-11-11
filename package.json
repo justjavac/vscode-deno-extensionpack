@@ -3,7 +3,7 @@
   "displayName": "Deno VS Code Extension Pack",
   "description": "A collection of extensions for working with Deno Applications in VS Code",
   "publisher": "justjavac",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "galleryBanner": {
     "color": "#47B784",
     "theme": "dark"
