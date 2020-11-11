@@ -1,0 +1,58 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: ["14.11.0"]
+        deno: ["1.4.1"]
+        os: [ubuntu-latest]
+    name: build in ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install vsce
+        run: npm i vsce -g
+
+      - name: Environment
+        run: |
+          node -v
+          npm -v
+          vsce -V
+
+      - name: Package
+        run: vsce package -o ./vscode-deno-extensionpack.vsix
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: vscode-deno-extensionpack
+          path: vscode-deno-extensionpack.vsix
+
+      - name: Release
+        if: |
+          github.repository == 'justjavac/vscode-deno-extensionpack' &&
+          startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: |
+            vscode-deno-extensionpack.vsix
+
+      - name: Publish
+        if: |
+          github.repository == 'justjavac/vscode-deno-extensionpack' &&
+          startsWith(github.ref, 'refs/tags/')
+        env:
+          # https://dev.azure.com/propelml/_usersSettings/tokens
+          AZURE_PAT: ${{ secrets.AZURE_PAT }}
+        run: vsce publish --pat $AZURE_PAT
