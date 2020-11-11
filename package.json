@@ -29,8 +29,8 @@
     "deno extension collection"
   ],
   "extensionPack": [
-    "justjavac.vscode-deno",
-    "esbenp.prettier-vscode"
+    "denoland.vscode-deno",
+    "laurencebahiirwa.deno-std-lib-snippets"
   ],
   "license": "MIT"
 }
