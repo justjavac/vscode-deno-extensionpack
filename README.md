@@ -7,11 +7,9 @@ This extension pack packages some of the most popular (and some I find very usef
 
 ## Extensions included
 
-- [Deno support for VSCode](https://marketplace.visualstudio.com/items?itemName=justjavac.vscode-deno) - Adds Deno support for VS Code using the TypeScript Deno language service plugin.
+- [Deno support for VSCode](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno) - Deno support for VSCode
 
-- [Prettier - JavaScript formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - format your Javascript / Typescript / CSS / Markdown.
-
-- [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=coenraads.bracket-pair-colorizer) - This extension allows matching brackets to be identified with colours. The user can define which characters to match, and which colours to use. Super handy!
+- [Deno Standard Library Snippets](https://marketplace.visualstudio.com/items?itemName=laurencebahiirwa.deno-std-lib-snippets) - Standard library import autocompletions for Deno in VS Code
 
 **Enjoy!**
 
