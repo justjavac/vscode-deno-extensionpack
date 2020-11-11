@@ -21,7 +21,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install vsce
-        run: npm i vsce -g
+        run: npm install -g vsce
 
       - name: Environment
         run: |
